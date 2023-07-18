@@ -1,9 +1,12 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 
   *{
     font-family: 'Poppins', sans-serif;
+  }
+  body{
+    margin:0;
   }
   :root{
     --pink: #E02C6D;
@@ -30,7 +33,7 @@
 
   header{
     width:80%;
-    margin:auto;
+    margin:0 auto 120px;
   }
   nav{
     display: flex;
@@ -77,6 +80,99 @@
   }
 
 
+/* Popular collection styles ========= */
+
+  .popular-collection{
+    max-width: 1300px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:26px;
+    justify-items: center;
+  }
+  main .section-heading{
+    font-weight: 600;
+    margin-bottom:50px;
+    text-align: center;
+  }
+  main .more-text{
+    color:#E02C6D;
+    font-weight: 700;
+    max-width: 81%;
+    text-align: end;
+    margin-top:38px;
+  }
+  .popular-collection .card{
+    width:300px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding:15px;
+  }
+  .card h1{
+    font-weight: 500;
+    margin-top: 0;
+  }
+  .card h2{
+    font-weight: 400;
+    font-size: 23px;
+    margin:3px 0;
+  }
+  .card small{
+    font-weight: 600;
+  }
+  .card small .fa-star{
+    color:#FB8200;
+  }
+  .card h5{
+    color:rgba(0, 0, 0, 0.495);
+    margin:7px 0 5px;
+    font-size: 14px;
+  }
+
+
+/* featured section styles ============ */
+
+
+.feature-section {
+  max-width: 1280px;
+  margin: 70px auto;
+  display: flex;
+  gap:60px;
+  align-items: center;
+}
+.feature-content h1{
+  font-size: 34px;
+}
+.feature-content button{
+  border-radius: 0;
+  padding:8px 25px;
+}
+
+/* footer section styles ============ */
+
+footer{
+  background-color: rgba(0, 0, 0, 0.995);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:rgba(255, 255, 255, 0.87);
+  height: 230px;
+}
+footer .icon{
+  padding-left:14px;
+}
+footer h2, h4, h5{
+  margin-top:0;
+}
+footer h4, h5{
+  color:#e02c6ed2;
+  font-weight: 500;
+}
+
+
+
 
 
   /* RESPONSIVE STYLES ==================
@@ -87,6 +183,8 @@
     header{
       width:95%;
       font-size: 0.8rem;
+      margin:0 auto 50px;
+      
     }
     nav{
       flex-direction: column;
@@ -125,4 +223,53 @@
     .sponsors img{
       width:17%;
     }
+    main{
+      font-size: 0.8rem;
+    }
+    main .section-heading{
+      margin-bottom:26px;
+      font-size: 20px;
+      color:#E02C6D;
+      border-left:1px solid #E02C6D;
+    }
+
+    .popular-collection{
+      grid-template-columns:1fr;
+      gap:26px;
+    }
+
+    .feature-section{
+      flex-direction: column-reverse;
+      margin:30px auto;
+      gap: 16px;
+      text-align: center;
+    }
+    .feature-section img{
+      width:75%;
+    }
+    .feature-content h1{
+      font-size:22px;
+    }
+    .feature-content button{
+      font-size: 12px;
+      padding:7px 17px;
+    }
+    footer{
+      margin-top:45px;
+      height: 110px;
+      font-size: 0.6rem;
+    }
+    footer h4{
+      margin:0;
+    }
   }
+
+/* RESPONSIVE FOR TABLET ============= */
+
+ @media screen and (min-width:577px) and (max-width:768px){
+  
+  .popular-collection{
+    grid-template-columns:repeat(2, 1fr);
+    gap:26px;
+  }
+ }
